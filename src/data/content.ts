@@ -99,14 +99,40 @@ export const decision = {
   title: "Decisão no tempo certo muda o jogo.",
   body: "Empresários que prosperam não esperam a 'hora perfeita'. Eles agem com precisão. A mentoria do Júnior Maffille encurta o caminho, elimina tentativas aleatórias e orienta cada passo com método — para você decidir melhor, na hora certa, e crescer com consistência.",
   image: {
-    src: "/images/urgency.jpg",
+    src: "/images/decision-watch.png",
     alt: "Relógio de bolso nas mãos — o momento decisivo",
   },
   vision: {
-    src: "/images/vision.jpg",
-    alt: "Júnior Maffille — visão de futuro",
     title: "Visão de futuro",
     text: "Quem decide rápido com método, cresce primeiro.",
+    body: "Empresários que prosperam não esperam a hora perfeita. Eles agem com precisão — e o método encurta o caminho até o resultado.",
+    items: [
+      {
+        src: "/images/gallery/1.jpg",
+        alt: "Júnior Maffille em Paris, com a Torre Eiffel ao fundo",
+        title: "Elegância",
+      },
+      {
+        src: "/images/gallery/2.jpg",
+        alt: "Júnior Maffille em ambiente urbano moderno",
+        title: "Visão",
+      },
+      {
+        src: "/images/gallery/3.jpg",
+        alt: "Júnior Maffille em evento formal",
+        title: "Presença",
+      },
+      {
+        src: "/images/gallery/4.jpg",
+        alt: "Júnior Maffille em ambiente clássico",
+        title: "Tradição",
+      },
+      {
+        src: "/images/gallery/5.jpg",
+        alt: "Júnior Maffille com iluminação dramática",
+        title: "Liderança",
+      },
+    ],
   },
   pillars: [
     {
