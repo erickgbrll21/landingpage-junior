@@ -1,8 +1,11 @@
-import Image from "next/image";
+import { PackageCheck, Receipt, Repeat2, Users } from "lucide-react";
 import { results } from "@/data/content";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { SqueezeCarousel } from "@/components/ui/SqueezeCarousel";
 import { Reveal, RevealGroup } from "@/components/motion/Reveal";
+
+const metricIcons = [Receipt, Users, PackageCheck, Repeat2];
 
 export function Results() {
   return (
@@ -16,43 +19,60 @@ export function Results() {
           />
         </Reveal>
 
-        <RevealGroup className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line lg:grid-cols-4">
-          {results.metrics.map((metric) => (
-            <article
-              key={metric.label}
-              className="reveal-child bg-card px-5 py-8 sm:px-7 sm:py-10"
-            >
-              <p className="font-display text-4xl tracking-tight text-ink sm:text-5xl">
-                {metric.value}
-              </p>
-              <p className="mt-3 text-sm leading-snug text-muted">{metric.label}</p>
-            </article>
-          ))}
+        <RevealGroup className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          {results.metrics.map((metric, index) => {
+            const Icon = metricIcons[index];
+            return (
+              <article
+                key={metric.label}
+                className="reveal-child group relative overflow-hidden rounded-2xl bg-espresso px-5 py-7 shadow-[0_18px_40px_rgba(20,17,14,0.22)] transition-transform duration-300 ease-out hover:-translate-y-1 sm:px-6 sm:py-8"
+              >
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -top-16 -right-10 h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(193,154,91,0.38),transparent_68%)]"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 opacity-40 bg-[linear-gradient(165deg,rgba(193,154,91,0.16)_0%,transparent_42%)]"
+                />
+                <div className="relative flex items-center justify-between">
+                  <span className="text-[0.62rem] font-semibold tracking-[0.22em] text-gold-line uppercase">
+                    0{index + 1}
+                  </span>
+                  <span className="grid h-8 w-8 place-items-center rounded-full border border-hero-gold/25 bg-hero-gold/10 text-hero-gold">
+                    <Icon aria-hidden="true" className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+                <p className="font-sans relative mt-6 text-[2.6rem] leading-none font-bold tracking-tight text-hero-gold sm:text-5xl">
+                  {metric.value}
+                </p>
+                <p className="relative mt-3 max-w-[12rem] text-sm leading-snug text-white/72">
+                  {metric.label}
+                </p>
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-5 bottom-0 h-px bg-gradient-to-r from-hero-gold via-hero-gold/50 to-transparent sm:inset-x-6"
+                />
+              </article>
+            );
+          })}
         </RevealGroup>
 
         <div className="mt-16">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-accent">
             Nossa operação em imagens
           </p>
-          <RevealGroup className="mt-6 grid gap-5 md:grid-cols-3">
-            {results.photos.map((photo) => (
-              <figure key={photo.src} className="reveal-child group">
-                <div className="overflow-hidden rounded-2xl bg-paper-deep">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    width={800}
-                    height={640}
-                    className="aspect-[5/4] h-auto w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                    sizes="(max-width: 768px) 100vw, 32vw"
-                  />
-                </div>
-                <figcaption className="mt-3 text-sm text-muted">
-                  {photo.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </RevealGroup>
+          <Reveal className="mt-6">
+            <SqueezeCarousel
+              slides={results.photos.map((photo) => ({
+                id: photo.src,
+                title: photo.caption,
+                image: photo.src,
+                imageAlt: photo.alt,
+              }))}
+              label="Nossa operação em imagens"
+            />
+          </Reveal>
         </div>
       </Container>
     </section>

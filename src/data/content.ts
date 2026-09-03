@@ -245,9 +245,19 @@ export const offer = {
   id: "oferta",
   eyebrow: "Próximo passo",
   title: "Pronto para transformar sua padaria?",
-  body: "Escolha a melhor forma de iniciar sua jornada rumo ao crescimento.",
+  body: "Preencha seus dados e fale direto com a mentoria no WhatsApp.",
   primaryCta: "Quero ser mentorado",
   secondaryCta: "Falar no WhatsApp",
+  form: {
+    fields: {
+      name: { name: "nome", label: "Nome", placeholder: "Seu nome" },
+      bakery: { name: "padaria", label: "Padaria", placeholder: "Nome da padaria" },
+      city: { name: "cidade", label: "Cidade", placeholder: "Cidade e estado" },
+      phone: { name: "whatsapp", label: "WhatsApp", placeholder: "(31) 99999-9999" },
+    },
+    submit: "Quero ser mentorado",
+    messageIntro: "Olá Júnior, quero ser mentorado.",
+  },
 } as const;
 
 export const faq = {
@@ -279,6 +289,21 @@ export const faq = {
 } as const;
 
 export const footer = {
-  note: "Mentoria Júnior Maffille — Transforme sua padaria",
-  rights: "Todos os direitos reservados.",
+  disclaimer:
+    "A mentoria não oferece garantia de resultados financeiros. Os resultados dependem do contexto, das decisões e da execução de cada participante. O programa é uma experiência educacional de gestão e execução para padarias. Não substitui assessoria jurídica, contábil ou financeira individualizada.",
+  company: "Júnior Maffille · Mentoria para Padarias.",
+  location: "Minas Gerais, Brasil.",
+  contact: {
+    email: "contato@juniormaffille.com.br",
+    emailLabel: "contato@juniormaffille.com.br",
+  },
+  legal: {
+    prefix: "Ao acessar esta página, você concorda com os",
+    terms: "Termos de Uso",
+    termsHref: "/termos",
+    and: "e a",
+    privacy: "Política de Privacidade",
+    privacyHref: "/privacidade",
+    suffix: ".",
+  },
 } as const;

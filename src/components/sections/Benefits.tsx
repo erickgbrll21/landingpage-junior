@@ -29,7 +29,7 @@ export function Benefits() {
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-paper-deep text-accent">
                   <Icon aria-hidden="true" className="h-5 w-5" />
                 </div>
-                <h3 className="font-display mt-5 text-2xl text-ink">{item.title}</h3>
+                <h3 className="font-sans mt-5 text-2xl font-semibold text-ink">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
                   {item.text}
                 </p>

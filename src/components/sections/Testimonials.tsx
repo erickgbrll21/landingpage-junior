@@ -23,7 +23,7 @@ export function Testimonials() {
               key={item.name}
               className="reveal-child rounded-2xl bg-espresso p-8 text-white sm:p-10"
             >
-              <p className="font-display text-2xl leading-snug sm:text-3xl">
+              <p className="font-sans text-2xl leading-snug font-semibold sm:text-3xl">
                 “{item.quote}”
               </p>
               <footer className="mt-8 border-t border-white/10 pt-5">

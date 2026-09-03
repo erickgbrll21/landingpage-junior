@@ -112,7 +112,7 @@ export function Mentor() {
 
       <div className="relative grid w-full grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] items-stretch lg:min-h-[40rem] lg:grid-cols-[28rem_minmax(0,1fr)] xl:grid-cols-[32rem_minmax(0,1fr)]">
         <Reveal className="col-span-2 px-5 pt-2 pb-2 sm:px-8 sm:pb-4 lg:col-span-1 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:flex lg:flex-col lg:justify-center lg:py-20 lg:pr-12 lg:pl-20 xl:pl-24">
-          <h2 className="font-display max-w-xl text-[1.85rem] leading-[1.15] font-semibold tracking-tight text-ink sm:text-3xl lg:text-[3.15rem]">
+          <h2 className="font-sans max-w-xl text-[1.85rem] leading-[1.15] font-bold tracking-tight text-ink sm:text-3xl lg:text-[3.15rem]">
             {mentor.title}
           </h2>
           <div className="mt-4 max-w-lg space-y-3 text-sm leading-relaxed text-ink-soft text-justify sm:mt-5 sm:space-y-4 lg:mt-6 lg:text-base">

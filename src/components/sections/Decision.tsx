@@ -33,7 +33,7 @@ export function Decision() {
                 <p className="text-xs font-semibold tracking-[0.22em] text-gold-line uppercase">
                   0{index + 1}
                 </p>
-                <h3 className="mt-3 font-display text-xl text-white">
+                <h3 className="mt-3 font-sans text-xl font-semibold text-white">
                   {pillar.title}
                 </h3>
                 <p className="mt-2 text-sm text-white/70">{pillar.text}</p>
