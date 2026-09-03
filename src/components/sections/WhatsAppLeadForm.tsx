@@ -40,9 +40,9 @@ export function WhatsAppLeadForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto mt-9 w-full max-w-xl text-left"
+      className="mt-9 w-full text-left"
     >
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <label className="block">
           <span className={labelClass}>{name.label}</span>
           <input
