@@ -6,10 +6,10 @@ export const site = {
     "Transforme sua padaria com a mentoria que já mudou centenas de negócios. De prejuízo ao crescimento de até 3x em apenas 6 meses.",
   url: "https://www.juniormaffille.com",
   locale: "pt_BR",
-  phoneDisplay: "(31) 8349-0216",
-  whatsapp: "553183490216",
+  phoneDisplay: "(31) 9175-5440",
+  whatsapp: "553191755440",
   whatsappHref:
-    "https://wa.me/553183490216?text=Junior%20quero%20ser%20mentorado",
+    "https://wa.me/553191755440?text=Junior%20quero%20ser%20mentorado",
 } as const;
 
 export const navLinks = [
